@@ -36,33 +36,24 @@ void setup() {
 
 void loop() {
     
-    // String temp = String(analogRead(A0));
-    // Particle.publish("clap", temp, PRIVATE);
-  
     
     int x = analogRead(A0);
-    // lcd.clear();
-    // lcd.print(x);
+
     
     if (x > 3000) {
         
-        // delay(500);
-        // while(1) {
-        //     x = analogRead(A0);
-        // }
-        
+
         delay(500);
-        // if (x > 3000) {
             
             
             if (light_on) {
                 
                 digitalWrite(D7, LOW);
-                //delay(1000);
+
                 light_on = 0;
                 
                 lcd.clear();
-                //lcd.print(light_on);
+
                 delay(500);
                 lcd.print("LIGHT OFF");
                 
@@ -72,11 +63,11 @@ void loop() {
             else {
                 
                 digitalWrite(D7, HIGH);
-                //delay(1000);
+  
                 light_on = 1;
                 
                 lcd.clear();
-                //lcd.print(light_on);
+ 
                 delay(500);
                 lcd.print("LIGHT ON");
                 
@@ -86,24 +77,9 @@ void loop() {
 
  
             
-       // }
 
     }
     
 
-    
-
-    //delay(10);
-    
-    // if (digitalRead(D4) == HIGH) {
-        
-    //     delay(500);
-        
-    //     lcd.print("first clap"); 
-        
-    //     if (digitalRead(D4) == HIGH) {
-    //         lcd.print("second clap"); 
-    //     }
-        
-    // }
+   
 }
